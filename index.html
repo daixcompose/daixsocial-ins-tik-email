@@ -20,7 +20,7 @@
     body {
       display: grid;
       place-items: center;
-      height: 100vh;
+      height: 60vh;
       background-color: transparent;
     }
 
@@ -46,7 +46,7 @@
 
     .fill:hover {
       background-color: #D40000;
-      color: #fff;
+      color: #8c8c8c;
       transform: scale(1.1);
     }
 
@@ -75,16 +75,6 @@
       <span class="icon"><i class="fab fa-tiktok"></i></span>
     </div>
 
-    <!-- Facebook -->
-    <div id="facebook" onclick="navigate(this.id)" class="fill facebook">
-      <span class="icon"><i class="fab fa-facebook-f"></i></span>
-    </div>
-
-    <!-- YouTube -->
-    <div id="youtube" onclick="navigate(this.id)" class="fill youtube">
-      <span class="icon"><i class="fab fa-youtube"></i></span>
-    </div>
-
   </div>
 
   <script>
@@ -95,10 +85,6 @@
         window.open("https://instagram.com/daixcompose", '_blank').focus();
       } else if (id === "tiktok") {
         window.open("https://www.tiktok.com/@daixcompose", '_blank').focus();
-      } else if (id === "facebook") {
-        window.open("https://www.facebook.com/DaixuanAi/", '_blank').focus();
-      } else if (id === "youtube") {
-        window.open("https://www.youtube.com/@daixcompose", '_blank').focus();
       }
     }
   </script>
