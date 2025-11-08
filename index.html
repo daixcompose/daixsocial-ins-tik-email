@@ -1,105 +1,195 @@
 <!DOCTYPE html>
+
+<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daix Ai | Socials</title>
+  <title>My Socials</title>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
   <style>
-    /* Reset everything */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html, body {
-      width: 50%;
-      height: 50%;
-      margin: -5;
-      padding: -5;
-      background: transparent;
-      font-family: sans-serif;
-    }
-
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      place-items: center;
     }
 
     .wrapper {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 100%;
-      height: 100%;
+      padding-top: 10px;
+      display: inline-flex;
+
     }
 
     .fill {
-      width: 33.33%;      /* Each button takes up 1/3 of the width */
-      height: 100%;        /* Fill the full height of the page */
-      border-radius: 50%;
-      background-color: #e0e0e0;
-      color: #4b4b4b;
       display: flex;
-      justify-content: center;
       align-items: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .fill:hover {
-      background-color: #D40000;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
       color: #fff;
-      transform: scale(1.1);
+      outline: 0;
+      cursor: pointer;
+      position: relative;
+      margin: 0px;
+      background-color: #4b4b4b;
     }
 
     .icon {
-      font-size: 7vw; /* Icon scales with viewport width */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-font-size: 64px;
-      min-font-size: 24px;
+      font-size: 1em;
+    }
+
+    .blog:hover{
+      background-color: #D40000;
+    }
+
+    .email:hover{
+      background-color: #D40000;
+    }
+
+    .facebook:hover{
+      background-color: #D40000;
+    }
+
+    .instagram:hover{
+      background: #D40000;
+    }
+
+    .linkedin:hover{
+      background-color: D40000;
+    }
+
+    .twitter:hover{
+      background-color: D40000;
+    }
+
+    .reddit:hover{
+      background-color: D40000;
+    }
+
+    .tiktok:hover{
+      background-color: D40000;
+    }
+
+    .youtube:hover{
+      background-color: D40000;
+    }
+
+    .pinterest:hover{
+      background-color: D40000;
+    }
+
+    .telegram:hover{
+      background-color: #2AABEE;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .social:hover {
+      color: #D40000;
     }
   </style>
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- Email -->
-    <div id="email" onclick="navigate(this.id)" class="fill email">
-      <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+
+  <body>
+
+    <div class="wrapper">
+
+
+      <!-- Start email Icon -->
+      <div id="email" onclick="navigate(this.id)" class="fill email">
+        <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+      </div>
+      <!-- End email Icon -->
+
+      <!-- Start instagram Icon -->
+      <div id="instagram" onclick="navigate(this.id)" class="fill instagram">
+        <span class="icon"><i class="fab fa-instagram"></i></span>
+      </div>
+      <!-- End instagram Icon -->
+
+      <!-- Start tiktok Icon -->
+      <div id="tiktok" onclick="navigate(this.id)" class="fill tiktok">
+        <span class="icon"><i class="fab fa-tiktok"></i></span>
+      </div>
+      <!-- End tiktok Icon -->
+
+      <!-- Start youtube Icon -->
+      <div id="youtube" onclick="navigate(this.id)" class="fill youtube">
+        <span class="icon"><i class="fab fa-youtube"></i></span>
+      </div>
+      <!-- End youtube Icon -->
+
+
+
+
+
     </div>
 
-    <!-- Instagram -->
-    <div id="instagram" onclick="navigate(this.id)" class="fill instagram">
-      <span class="icon"><i class="fab fa-instagram"></i></span>
-    </div>
 
-    <!-- TikTok -->
-    <div id="tiktok" onclick="navigate(this.id)" class="fill tiktok">
-      <span class="icon"><i class="fab fa-tiktok"></i></span>
-    </div>
-  </div>
 
-  <script>
-    function navigate(id) {
-      if (id === "email") {
-        window.open("mailto:daix@daixcompose.com", '_blank').focus();
-      } else if (id === "instagram") {
-        window.open("https://instagram.com/daixcompose", '_blank').focus();
-      } else if (id === "tiktok") {
-        window.open("https://www.tiktok.com/@daixcompose", '_blank').focus();
+
+    <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+
+        if (id === "blog")
+          window.open("https://blog.shorouk.dev", '_blank').focus(); //Add the url to your blog
+
+        else if (id === "email") {
+          window.open("mailto:daix@daixcompose.com", '_blank').focus(); //Add your email after "mailto:""
+        }
+        else if (id === "facebook") {
+          window.open("https://facebook.com/", '_blank').focus(); //Add the url to your facebook page or account
+        }
+        else if (id === "instagram") {
+          window.open("instagram.com/daixcompose", '_blank').focus(); //Add the url to your instagram account
+        }
+        else if (id === "linkedin") {
+          window.open("https://www.linkedin.com/", '_blank').focus(); //Add the url to your pinterest account
+        }
+        else if (id === "twitter") {
+          window.open("https://twitter.com/", '_blank').focus(); //Add the url to your pinterest account
+        }
+        else if (id === "reddit") {
+          window.open("https://www.reddit.com/", '_blank').focus(); //Add the url to your reddit account
+        }
+        else if (id === "tiktok") {
+          window.open("https://www.tiktok.com/daixcompose", '_blank').focus(); //Add the url to your tiktok account
+        }
+        else if (id === "youtube") {
+          window.open("https://www.youtube.com/daixcompose", '_blank').focus(); //Add the url to your youtube account
+        }
+        else if (id === "pinterest") {
+          window.open("https://www.pinterest.com/", '_blank').focus(); //Add the url to your pinterest account
+        }
+        else if (id === "telegram") {
+          window.open("https://web.telegram.org/", '_blank').focus(); //Add the url to your telegram account
+        }
       }
-    }
-  </script>
-</body>
+
+    </script>
+
+
+
+  </body>
 
 </html>
