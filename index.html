@@ -22,12 +22,20 @@
       place-items: center;
       height: 100vh;
       background-color: transparent;
+      font-family: sans-serif;
     }
 
     .wrapper {
       display: inline-flex;
       padding: 10px;
       background-color: transparent;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .icons {
+      display: flex;
+      margin-bottom: 20px;
     }
 
     .fill {
@@ -53,6 +61,22 @@
     .icon {
       font-size: 1.3em;
     }
+
+    .refresh-btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: ##737373;
+      color: #4b4b4b;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .refresh-btn:hover {
+      background-color: #D40000;
+      color: #fff;
+      transform: scale(1.05);
+    }
   </style>
 
 </head>
@@ -60,20 +84,25 @@
 <body>
   <div class="wrapper">
 
-    <!-- Email -->
-    <div id="email" onclick="navigate(this.id)" class="fill email">
-      <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+    <div class="icons">
+      <!-- Email -->
+      <div id="email" onclick="navigate(this.id)" class="fill email">
+        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+      </div>
+
+      <!-- Instagram -->
+      <div id="instagram" onclick="navigate(this.id)" class="fill instagram">
+        <span class="icon"><i class="fab fa-instagram"></i></span>
+      </div>
+
+      <!-- TikTok -->
+      <div id="tiktok" onclick="navigate(this.id)" class="fill tiktok">
+        <span class="icon"><i class="fab fa-tiktok"></i></span>
+      </div>
     </div>
 
-    <!-- Instagram -->
-    <div id="instagram" onclick="navigate(this.id)" class="fill instagram">
-      <span class="icon"><i class="fab fa-instagram"></i></span>
-    </div>
-
-    <!-- TikTok -->
-    <div id="tiktok" onclick="navigate(this.id)" class="fill tiktok">
-      <span class="icon"><i class="fab fa-tiktok"></i></span>
-    </div>
+    <!-- Refresh / Republish Button -->
+    <button class="refresh-btn" onclick="refreshPage()">Refresh Page</button>
 
   </div>
 
@@ -86,6 +115,11 @@
       } else if (id === "tiktok") {
         window.open("https://www.tiktok.com/@daixcompose", '_blank').focus();
       }
+    }
+
+    function refreshPage() {
+      // Reloads the page
+      location.reload();
     }
   </script>
 
