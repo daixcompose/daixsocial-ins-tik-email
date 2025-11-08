@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Socials</title>
+  <title>Daix Compose | Socials</title>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
   <style>
@@ -16,30 +17,41 @@
     }
 
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Poppins", sans-serif;
-      height: 100vh;
+      background-color: #fff;
+      font-family: sans-serif;
     }
 
     .wrapper {
+      position: fixed; /* Pin to top */
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
       display: inline-flex;
+      padding: 10px 0;
+      z-index: 1000;
     }
 
-    .social {
-      margin: 0 8px;
+    .fill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      color: #fff;
       cursor: pointer;
+      margin: 8px;
+      background-color: #D40000; /* Normal color */
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
     }
 
     .icon {
-      font-size: 1.5em; /* smaller icon */
-      color: #7a7a7a;
-      transition: color 0.3s;
+      font-size: 1.3em;
     }
 
-    .social:hover .icon {
-      color: #D40000; /* hover color */
+    /* Hover color */
+    .fill:hover {
+      background-color: #4b4b4b;
     }
   </style>
 </head>
@@ -47,40 +59,33 @@
 <body>
   <div class="wrapper">
     <!-- Email -->
-    <div id="email" class="social" onclick="navigate(this.id)">
+    <div id="email" onclick="navigate(this.id)" class="fill email">
       <span class="icon"><i class="fa-solid fa-envelope"></i></span>
     </div>
 
     <!-- Instagram -->
-    <div id="instagram" class="social" onclick="navigate(this.id)">
+    <div id="instagram" onclick="navigate(this.id)" class="fill instagram">
       <span class="icon"><i class="fab fa-instagram"></i></span>
     </div>
 
     <!-- TikTok -->
-    <div id="tiktok" class="social" onclick="navigate(this.id)">
+    <div id="tiktok" onclick="navigate(this.id)" class="fill tiktok">
       <span class="icon"><i class="fab fa-tiktok"></i></span>
-    </div>
-
-    <!-- YouTube -->
-    <div id="youtube" class="social" onclick="navigate(this.id)">
-      <span class="icon"><i class="fab fa-youtube"></i></span>
-    </div>
-
-    <!-- Facebook -->
-    <div id="facebook" class="social" onclick="navigate(this.id)">
-      <span class="icon"><i class="fab fa-facebook"></i></span>
     </div>
   </div>
 
   <script>
     function navigate(id) {
-      if (id === "email") window.open("mailto:daix@daixcompose.com", "_blank");
-      else if (id === "instagram") window.open("https://instagram.com/daixcompose", "_blank");
-      else if (id === "tiktok") window.open("https://www.tiktok.com/@daixcompose", "_blank");
-      else if (id === "youtube") window.open("https://www.youtube.com/", "_blank");
-      else if (id === "facebook") window.open("https://facebook.com/", "_blank");
+      if (id === "email") {
+        window.open("mailto:daix@daixcompose.com", '_blank').focus();
+      } 
+      else if (id === "instagram") {
+        window.open("https://www.instagram.com/daixcompose", '_blank').focus();
+      } 
+      else if (id === "tiktok") {
+        window.open("https://www.tiktok.com/@daixcompose", '_blank').focus();
+      }
     }
   </script>
 </body>
-
 </html>
